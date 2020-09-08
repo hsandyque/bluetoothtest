@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BluetoothTest</string>
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_server">As Server</string>
+    <string name="action_client">As Client</string>
+    <string name="location_rationale">Need location permission for bluetooth</string>
+</resources>

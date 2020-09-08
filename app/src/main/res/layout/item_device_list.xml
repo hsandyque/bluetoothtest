@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_margin="@dimen/margin_m"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Testing"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_device_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_device_name"
+        app:layout_constraintStart_toStartOf="@id/tv_device_name"
+        app:layout_constraintEnd_toEndOf="@id/tv_device_name"
+        tools:text="Testing"/>
+    <View
+        android:id="@+id/divider_device_list"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_m"
+        android:background="@color/colorDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_device_address"
+        app:layout_constraintBottom_toBottomOf="parent"/>       
+</androidx.constraintlayout.widget.ConstraintLayout>

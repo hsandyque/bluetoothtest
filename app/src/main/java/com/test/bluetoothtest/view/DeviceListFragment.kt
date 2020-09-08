@@ -111,12 +111,16 @@ class DeviceListFragment : Fragment(), EasyPermissions.PermissionCallbacks,
             mainViewModel.connectAsServer()
             btn_server.visibility = View.GONE
             btn_client.visibility = View.GONE
+            btn_discoverable.visibility = View.VISIBLE
         }
         btn_client.setOnClickListener {
             btn_server.visibility = View.GONE
             btn_client.visibility = View.GONE
             rv_device_list.visibility = View.VISIBLE
             (fab_scan as View).visibility = View.VISIBLE
+        }
+        btn_discoverable.setOnClickListener {
+            enableDiscoverable()
         }
     }
     private fun setupViewModel() {
@@ -152,7 +156,12 @@ class DeviceListFragment : Fragment(), EasyPermissions.PermissionCallbacks,
             )
         }
     }
-
+    private fun enableDiscoverable() {
+        val discoverableIntent: Intent = Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE).apply {
+            putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300)
+        }
+        startActivity(discoverableIntent)
+    }
     // Create a BroadcastReceiver for ACTION_FOUND.
     private val receiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {

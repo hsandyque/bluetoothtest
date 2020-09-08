@@ -45,4 +45,14 @@ tools:context=".view.DeviceListFragment">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/action_client"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_discoverable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/action_discoverable"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
